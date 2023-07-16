@@ -8,6 +8,7 @@ export const SectionStyle = styled.section`
     height: calc(100vh - 8rem);
     display: flex;
 
+
     .bgHome{
     width: 40%;
     height: 100%;
@@ -37,7 +38,7 @@ export const SectionStyle = styled.section`
         background-position: center;
         background-size: 65%;
         position: relative;
-        z-index: 2;
+        z-index: 1;
 
         img{
             max-width: 100%; 
@@ -45,7 +46,6 @@ export const SectionStyle = styled.section`
             top: 50%;
             left: 50%;
             transform: translate(-50% , -50%);
-            z-index: 1;
             opacity: 0.05;
         }
 
