@@ -12,7 +12,6 @@ const Contact = ()=>{
                 </div>
 
                 <div className="containerInf">
-                    <p>@k_kersen</p>
                     <p>k.kersen@hotmail.com</p>
                     <p>(31) 9 7307-5968</p>
                     <div className="containerBtn">
