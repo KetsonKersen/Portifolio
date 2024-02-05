@@ -3,11 +3,11 @@ import { SectionStyle } from "./style"
 
 import BGacademia2k from "../../assets/Academia2k.png"
 import CardapioOnline from "../../assets/CardapioOnline.png"
-import Starmovie from "../../assets/Starmovie.png"
+import FindCar from "../../assets/FindCar.png"
 
 import VideoAcadenia from "../../assets/VideoAcademia2k.mp4"
 import VideoCardapioOnline from "../../assets/VideoCardapioOnline.mp4"
-import VideoStarMovie from "../../assets/VideoStarMovie.mp4"
+import VideoFindCar from "../../assets/VideoFindCar.mp4"
 
 import {BsCodeSlash} from "react-icons/bs"
 import {AiOutlinePlayCircle , AiOutlineClose} from "react-icons/ai"
@@ -30,12 +30,12 @@ const ListProjects = [
         inf: "2kCardapio-Online é um site de pedidos online, o usuário pode navegar pelo sistema de categorias para para escolher o seu pedido, confirmar carrinho, adicionar endereço para entrega, escolher a forma de pagamento e confirmar pedido. Aplicação desenvolvida com React.js , TypeScript e Next.js utilizando Tailwind. Consumindo a API do VIACEP para realizar a busca de CEP do usuário e preencher os campos de endereço necessários"
     },
     {
-        img:Starmovie,
-        video: VideoStarMovie,
-        name:'Star Movie',
-        linkGit:"https://github.com/KetsonKersen/StarMovie",
-        linkDemo:"https://star-movie-ten.vercel.app/",
-        inf: "StarMovie é uma aplicação que reúne informações sobre produções, permitindo que os usuários pesquisem seus filmes favoritos, além de poder assitir ao trailer. Podendo também encontrar novos filmes através dos filtros de categorias ou realizando uma busca pelo nome do filme. A aplicação foi desenvolvida em React, utilizando Vite.js. Consumindo a API do themoviedb."
+        img:FindCar,
+        video: VideoFindCar,
+        name:'FindCar',
+        linkGit:"https://github.com/KetsonKersen/find-car",
+        linkDemo:"https://findcar-nu.vercel.app/",
+        inf: "Projeto desenvolvido para praticar meus conhecimentos. FindCar é um site desenvolvido para uma possível concessionaria, onde o usuário tem uma vasta opção de filtragem para encontrar o veículo que atenda a suas expectativas."
     },
 ]
 
@@ -76,9 +76,9 @@ const Projects = ()=>{
             <div className="container containerProjects">
                 <div className="containerOptions">
                     <h3>Projetos</h3>
-                    {ListProjects.map((Project)=>{
+                    {ListProjects.map((Project, index )=>{
                         return(
-                            <div onClick={()=>ToggleModal()} className="containerImg" onMouseEnter={(e)=>Active(e.currentTarget,Project)}>
+                            <div key={index} onClick={()=>ToggleModal()} className="containerImg" onMouseEnter={(e)=>Active(e.currentTarget,Project)}>
                                 <img src={Project.img} width="100%" height="auto"/>
                                 <p>{Project.name}</p>
                             </div>
@@ -94,8 +94,8 @@ const Projects = ()=>{
                         <video src={state.video} controls autoPlay loop width="100%" height="auto"/>
                         <p>{state.inf}</p>
                         <div className="containerBtn">
-                            <a href={state.linkGit} target="_blank">Code <BsCodeSlash size={25}/></a>
-                            <a href={state.linkDemo} target="_blank">Demo <AiOutlinePlayCircle size={25}/></a>
+                            <a href={state.linkGit} rel="noreferrer" target="_blank">Code <BsCodeSlash size={25}/></a>
+                            <a href={state.linkDemo} rel="noreferrer" target="_blank">Demo <AiOutlinePlayCircle size={25}/></a>
                         </div>
                     </div>
                 }
